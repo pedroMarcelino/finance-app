@@ -1,0 +1,12 @@
+.welcome-screen{
+    height: 100vh;
+}
+
+h1{
+    font-size: 68px;
+    font-weight: bold;
+}
+
+.img-welcome{
+    width: 50%;
+}
