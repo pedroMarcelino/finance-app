@@ -1,5 +1,5 @@
 .welcome-screen{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h1{
@@ -8,5 +8,11 @@ h1{
 }
 
 .img-welcome{
-    width: 50%;
+    width: 60%;
+    max-width: 60%; /* Garantir que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto;
+}
+
+.navbar {
+    margin-bottom: 20px;
 }

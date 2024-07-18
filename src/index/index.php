@@ -29,13 +29,22 @@
 
     <div class="contatiner d-flex justify-content-center align-items-center shadown welcome-screen">
         <div class="row">
-                <div class="col-md-6 text-center">
-                    <img src="../assets/imgs/img-welcome.png" alt="Welcome" class="img-welcome">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 text-center">
+                <img src="../assets/imgs/img-welcome.png" alt="Welcome" class=" img-welcome">
+            </div>
+            <div class="col-md-5 text-center">
+                <h2>Bem-vindo ao</h2>
+                <h1>Finance App</h1>
+                <p>O Finance App é o lugar onde você poderá organizar todas as suas 
+                   finanças em um lugara só!
+                </p>
+                <div class="row">
+                    <button class="btn btn-danger w-50 ">Register</button>
+                    <button class="btn btn-primary w-50 ">Login</button>
                 </div>
-                <div class="col-md-6 text-center">
-                    <h2>Bem-vindo ao</h2>
-                    <h1>Finance App</h1>
-                </div>
+            </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 

@@ -7,16 +7,14 @@
     #6f95ff
 */
 
-*{
+body, html {
     margin: 0;
     padding: 0;
-}
+    width: 100%;
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
 
-html {
     scroll-behavior: smooth;
-}
 
-body{
     font-family: "Raleway", sans-serif;
     color: black;
 }
