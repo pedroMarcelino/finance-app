@@ -8,43 +8,27 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand me-auto px-5" href="#">Finance App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse px-5" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link link-nav active" href="">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-nav" href="">Register</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include('../assets/includes/navbar.php')?>
 
-    <div class="contatiner d-flex justify-content-center align-items-center shadown welcome-screen">
+    <div class="container d-flex justify-content-center align-items-center shadown welcome-screen">
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-5 text-center">
-                <img src="../assets/imgs/img-welcome.png" alt="Welcome" class=" img-welcome">
+            <div class="col-md-6 col-sm-12 text-center">
+                <img src="../assets/imgs/welcome/img-welcome.png" alt="Welcome" class=" img-welcome">
             </div>
-            <div class="col-md-5 text-center">
+            <div class="col-md-6 col-sm-12 text-center p-5">
                 <h2>Bem-vindo ao</h2>
-                <h1>Finance App</h1>
+                <h1 class="h1-principal">Finance App</h1>
                 <p>O Finance App é o lugar onde você poderá organizar todas as suas 
-                   finanças em um lugara só!
-                </p>
+                    finanças em um lugara só!</p>
                 <div class="row">
-                    <button class="btn btn-danger w-50 ">Register</button>
-                    <button class="btn btn-primary w-50 ">Login</button>
+                    <div class="col-md-6 mt-3">
+                        <a href="../register/index.php"><button class="btn btn-register w-100 w-sm-50">Register </button></a>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <a href="../login/index.php"><button class="btn btn-login w-100 w-sm-50">Login</button></a>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-1"></div>
         </div>
     </div>
 

@@ -7,39 +7,26 @@
     #6f95ff
 */
 
-.welcome-screen{
+.screan-register{
     min-height: 90vh;
 }
 
-h1{
-    font-size: 68px;
-    font-weight: bold;
-}
-
-.img-welcome{
-    width: 80%;
+.img-register{
+    width: 100%;
     max-width: 100%; /* Garantir que a imagem não ultrapasse o tamanho do contêiner */
     height: auto;
 }
 
-.navbar {
-    margin-bottom: 20px;
-}
-
-.btn-register{
-    background-color: transparent;
-    border: 2px solid #413b6b;
-    border-radius: 15px;
-    /* font-weight: bold; */
+.input{
     font-size: 22px;
 }
 
-.btn-register:hover{
-    background-color: #413b6b;
-    color: #fff;
+.label-form{
+    font-size: 26px;
 }
 
-.btn-login{
+
+.btn-register{
     background-color: transparent;
     border: 2px solid #6f95ff;
     border-radius: 15px;
@@ -47,7 +34,7 @@ h1{
     font-size: 22px;
 }
 
-.btn-login:hover{
+.btn-register:hover{
     background-color: #6f95ff;
     color: #fff;
 }
