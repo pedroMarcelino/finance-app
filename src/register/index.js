@@ -14,23 +14,52 @@ window.addEventListener('load', (event) => {
             
 
     }, 1);
-
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    
     (function () {
         'use strict'
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-        // Loop over them and prevent submission
+        var forms = document.querySelectorAll('.validation-name')
         Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        console.log('error');
+                        event.preventDefault();
+                        event.stopPropagation()
+                    }else{
+                        event.preventDefault();
+                        console.log('Correto');
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
     })()
+
+    $('.btn-password').on('click', (event)=>{
+        event.preventDefault();
+        var forms = document.querySelectorAll('.validation-password')
+
+        const senha = $('#password').val();
+        const confSenha = $('#conf-password').val();
+
+        console.log(senha, confSenha);
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('click', function (event) {
+                    if(senha == confSenha){
+                        event.preventDefault();
+                        console.log('Correto');
+                    }else{
+                        $('#conf-password').val('')
+                        if (!form.checkValidity()) {
+                            console.log('error');
+                            event.preventDefault();
+                            event.stopPropagation()
+                        }
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })
 
 });

@@ -18,32 +18,54 @@
         </div>
     </div>
 
-    <!-- <div class="container d-flex justify-content-center align-items-center screan-register">
-        <div  class="animate__animated" > 
-            <form class="row g-3 needs-validation" novalidate>
-                <div class="col-md-12">
-                    <label for="validationCustom01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                    <div class="valid-feedback">Looks good!</div>
-                </div>
-            </form>
-        </div>
-    </div> -->
-
     <div class="container d-flex justify-content-center align-items-center screan-register animate__animated" id='form-register' hidden>
         <div class="row d-flex justify-content-center align-items-center ">
             <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
                 <img src="../assets/imgs/register/register.png" alt="register" class="img-register">
             </div>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="col-md-12 col-sm-12">
-                    <label for="first-name" class="form-label label-form">Nome</label>
-                    <input type="text" class="form-control input w-100" id="first-name" >
-                    <label for="surname" class="form-label label-form mt-2">Sobrenome</label>
-                    <input type="text" class="form-control input w-100" id="surname">
-                    <button class="btn btn-register w-100 w-sm-100 mt-4">Enviar </button>
-                </div>
+            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center"  >
+                <form class="validation-name" novalidate>
+                    <div id="block-name" class="row animate__animated">
+                        <div class="mb-3 col-md-12 col-sm-12">
+                            <label for="name" class="form-label label-form">Nome</label>
+                            <input type="text" class="form-control input" id="name" required>
+                            <div class="valid-feedback">Parece bom!</div>
+                            <div class="invalid-feedback">Por favor, forneça um nome válido.</div>
+                        </div>
+                        <div class="mb-3 col-md-12 col-sm-12">
+                            <label for="surname" class="form-label label-form">Sobrenome</label>
+                            <input type="text" class="form-control input" id="surname" required>
+                            <div class="valid-feedback">Parece bom!</div>
+                            <div class="invalid-feedback">Por favor, forneça um sobrenome válido.</div>
+                        </div>
+                        <div class="mb-3 col-md-12 col-sm-12">
+                            <label for="email" class="form-label label-form">E-mail</label>
+                            <input type="email" class="form-control input" id="email" required>
+                            <div class="valid-feedback">Parece bom!</div>
+                            <div class="invalid-feedback">Por favor, forneça um e-mail válido.</div>
+                        </div>
+                        <button class="btn btn-register w-100 btn-name">Próximo</button>
+                    </div>
+                </form>
             </div>
+            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center"  >
+                <form class="validation-password" novalidate>
+                    <div  class="mb-3 col-md-12 col-sm-12" >
+                        <label for="password" class="form-label label-form">Senha</label>
+                        <input type="password" class="form-control input" id="password" required>
+                        <div class="valid-feedback">Parece bom!</div>
+                        <div class="invalid-feedback">As senhas não são iguais!</div>
+                    </div>
+                    <div class="mb-3 col-md-12 col-sm-12">
+                        <label for="conf-password" class="form-label label-form">Confirmar senha</label>
+                        <input type="password" class="form-control input" id="conf-password" required>
+                        <div class="valid-feedback">Parece bom!</div>
+                        <div class="invalid-feedback">As senhas não são iguais!</div>
+                    </div>
+                    <button class="btn btn-register w-100 btn-password">Próximo</button>
+                </form>
+            </div>
+            
         </div>
     </div>
 

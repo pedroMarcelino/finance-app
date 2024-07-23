@@ -1,6 +1,6 @@
 <?php
     $username = "root";
     $password = "";
-    $conn = new PDO('mysql:host=localhost;dbname=db_gerenciamento', $username, $password);
+    $conn = new PDO('mysql:host=localhost;dbname=db_financas', $username, $password);
 
     // echo "teste";
