@@ -7,24 +7,12 @@
     #6f95ff
 */
 
-.screan-register{
-    min-height: 90vh;
+.cont-register{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.img-register{
-    width: 100%;
-    max-width: 100%; /* Garantir que a imagem não ultrapasse o tamanho do contêiner */
-    height: auto;
-}
-
-.input{
-    font-size: 22px;
-}
-
-.label-form{
-    font-size: 26px;
-}
-
 
 .btn-register{
     background-color: transparent;

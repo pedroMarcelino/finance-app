@@ -10,7 +10,7 @@
 <body>
     <?php include('../assets/includes/navbar.php')?>
 
-    <div class="container d-flex justify-content-center align-items-center screan-register" id='row-img-load'>
+    <div class="container cont-register d-flex justify-content-center align-items-center screan-register" id='row-img-load'>
         <div class="row">
             <div class="col-md-12">
                 <img id="img-load" class="animate__animated" src="../assets/imgs/svgs/bouncing-circles.svg" alt="" style="width:75%;">
@@ -18,54 +18,48 @@
         </div>
     </div>
 
-    <div class="container d-flex justify-content-center align-items-center screan-register animate__animated" id='form-register' hidden>
-        <div class="row d-flex justify-content-center align-items-center ">
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
-                <img src="../assets/imgs/register/register.png" alt="register" class="img-register">
-            </div>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center"  >
-                <form class="validation-name" novalidate>
-                    <div id="block-name" class="row animate__animated">
-                        <div class="mb-3 col-md-12 col-sm-12">
-                            <label for="name" class="form-label label-form">Nome</label>
-                            <input type="text" class="form-control input" id="name" required>
-                            <div class="valid-feedback">Parece bom!</div>
-                            <div class="invalid-feedback">Por favor, forneça um nome válido.</div>
-                        </div>
-                        <div class="mb-3 col-md-12 col-sm-12">
-                            <label for="surname" class="form-label label-form">Sobrenome</label>
-                            <input type="text" class="form-control input" id="surname" required>
-                            <div class="valid-feedback">Parece bom!</div>
-                            <div class="invalid-feedback">Por favor, forneça um sobrenome válido.</div>
-                        </div>
-                        <div class="mb-3 col-md-12 col-sm-12">
-                            <label for="email" class="form-label label-form">E-mail</label>
-                            <input type="email" class="form-control input" id="email" required>
-                            <div class="valid-feedback">Parece bom!</div>
-                            <div class="invalid-feedback">Por favor, forneça um e-mail válido.</div>
-                        </div>
-                        <button class="btn btn-register w-100 btn-name">Próximo</button>
+    <div class="container cont-register" id="form-register" hidden>
+        <div class="row w-100">
+            <form class="needs-validation w-100" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" required>
+                        <div class="invalid-feedback">Preencha esse campo!</div>
                     </div>
-                </form>
-            </div>
-            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center"  >
-                <form class="validation-password" novalidate>
-                    <div  class="mb-3 col-md-12 col-sm-12" >
-                        <label for="password" class="form-label label-form">Senha</label>
-                        <input type="password" class="form-control input" id="password" required>
-                        <div class="valid-feedback">Parece bom!</div>
-                        <div class="invalid-feedback">As senhas não são iguais!</div>
+                    <div class="col-md-6 mb-3">
+                        <label for="surname">Sobrenome</label>
+                        <input type="text" class="form-control" id="surname" required>
+                        <div class="invalid-feedback">Preencha esse campo!!</div>
                     </div>
-                    <div class="mb-3 col-md-12 col-sm-12">
-                        <label for="conf-password" class="form-label label-form">Confirmar senha</label>
-                        <input type="password" class="form-control input" id="conf-password" required>
-                        <div class="valid-feedback">Parece bom!</div>
-                        <div class="invalid-feedback">As senhas não são iguais!</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">Preencha com e-mail corretamente!</div>
                     </div>
-                    <button class="btn btn-register w-100 btn-password">Próximo</button>
-                </form>
-            </div>
-            
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="password">Senha</label>
+                        <input type="password" class="form-control" id="password" required>
+                        <div class="invalid-feedback">
+                            Ops! Algo parece estar errado!
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="confirmation-password">Confirme sua senha</label>
+                        <input type="password" class="form-control" id="confirmation-password"  required>
+                        <div class="invalid-feedback">
+                            Ops! Algo parece estar errado!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-end">
+                    <button class="btn btn-register p-2" type="submit">Cadastrar</button>
+                </div>
+            </form>
         </div>
     </div>
 

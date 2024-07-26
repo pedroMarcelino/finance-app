@@ -17,49 +17,37 @@ window.addEventListener('load', (event) => {
     
     (function () {
         'use strict'
-        var forms = document.querySelectorAll('.validation-name')
+        var forms = document.querySelectorAll('.needs-validation')
         Array.prototype.slice.call(forms)
             .forEach(function (form) {
                 form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        console.log('error');
-                        event.preventDefault();
-                        event.stopPropagation()
-                    }else{
-                        event.preventDefault();
-                        console.log('Correto');
+                    console.log($("#password").val(), $("#confirmation-password").val() );
+                    var password = document.getElementById('password');
+                    var confirmPassword = document.getElementById('confirmation-password');
+
+                    // Verificar se as senhas coincidem
+                    if (password.value !== confirmPassword.value) {
+                        confirmPassword.setCustomValidity('Passwords do not match');
+                        confirmPassword.classList.add('is-invalid');
+                        $('#confirmPasswordIcon').addClass('invalid-feedback-icon').html('<i class="bi bi-x-circle"></i>');
+                    } else {
+                        confirmPassword.setCustomValidity('');
+                        confirmPassword.classList.remove('is-invalid');
+                        confirmPassword.classList.add('is-valid');
+                        $('#confirmPasswordIcon').removeClass('invalid-feedback-icon').html('<i class="bi bi-check-circle"></i>');
+
+                        console.log('certo');
+
+                        
                     }
-                    form.classList.add('was-validated')
+
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
                 }, false)
             })
     })()
-
-    $('.btn-password').on('click', (event)=>{
-        event.preventDefault();
-        var forms = document.querySelectorAll('.validation-password')
-
-        const senha = $('#password').val();
-        const confSenha = $('#conf-password').val();
-
-        console.log(senha, confSenha);
-
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('click', function (event) {
-                    if(senha == confSenha){
-                        event.preventDefault();
-                        console.log('Correto');
-                    }else{
-                        $('#conf-password').val('')
-                        if (!form.checkValidity()) {
-                            console.log('error');
-                            event.preventDefault();
-                            event.stopPropagation()
-                        }
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })
-
 });
